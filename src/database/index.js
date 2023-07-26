@@ -6,11 +6,7 @@ import Category from '../app/models/Category'
 
 import configDataBase from '../config/database'
 
-
-
-
 const models = [User, Product, Category]
-
 class Database {
     constructor() {
         this.init()
@@ -18,7 +14,7 @@ class Database {
 
     init() {
         this.connection = new Sequelize(configDataBase)
-        models.map(( model ) => model.init(this.connection))
+        models.map((model) => model.init(this.connection))
     }
 }
 
